@@ -1,11 +1,12 @@
 import logo from "../../logo.svg";
 import "./estilo.css";
+import CartWidget from "./CartWidget/CartWidget";
 const Navbar = () => {
   return (
     <div className="navBar-container">
       <img width={"90px"} src={logo} alt="logo" />
       <div>
-        <h2>Tijuana Record Shop</h2>
+        <h2>TJ Record Shop</h2>
       </div>
       <div>
         <ul>
@@ -16,7 +17,9 @@ const Navbar = () => {
             <a href="#">Catalogo</a>
           </li>
           <li>
-            <a href="#">Carrito</a>
+            <a href="#">
+              <CartWidget />
+            </a>
           </li>
         </ul>
       </div>
