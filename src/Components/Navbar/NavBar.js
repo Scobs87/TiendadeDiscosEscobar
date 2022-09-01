@@ -1,6 +1,6 @@
 import logo from "../../logo.svg";
 import "./estilo.css";
-import CartWidget from "./CartWidget/CartWidget";
+import CartWidget from "./cartWidget/CartWidget";
 const Navbar = () => {
   return (
     <div className="navBar-container">

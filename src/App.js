@@ -1,6 +1,6 @@
 import "./App.css";
-import ItemListContainer from "./Components/Items List Container/ItemListContainer";
 import Navbar from "./Components/Navbar/NavBar";
+import ItemCount from "./Components/itemsListContainer/ItemCount";
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
         <Navbar />
       </header>
       <div>
-        <ItemListContainer greeting="Hola!" />
+        <ItemCount />
       </div>
     </div>
   );
