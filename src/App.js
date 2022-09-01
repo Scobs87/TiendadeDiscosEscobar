@@ -9,7 +9,7 @@ function App() {
         <Navbar />
       </header>
       <div>
-        <ItemCount />
+        <ItemCount stock={8} initial={1} />
       </div>
     </div>
   );

@@ -1,14 +1,14 @@
 import { useState } from "react";
 import "./ItemListContainer.css";
 
-const ItemCount = () => {
-  const [contador, setContador] = useState(0);
+const ItemCount = ({ stock, initial }) => {
+  const [contador, setContador] = useState(initial);
   const suma = () => {
-    return contador < 10 ? setContador(contador + 1) : null;
+    return contador < stock ? setContador(contador + 1) : setContador(initial);
   };
 
   const resta = () => {
-    return contador > 0 ? setContador(contador - 1) : null;
+    return contador > 1 ? setContador(contador - 1) : setContador(stock);
   };
 
   return (
