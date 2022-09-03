@@ -1,6 +1,6 @@
 import "./App.css";
 import Navbar from "./Components/Navbar/NavBar";
-import ItemCount from "./Components/ItemsListContainer/ItemCount";
+import ItemListContainer from "./Components/ItemsListContainer/ItemListContainer";
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
         <Navbar />
       </header>
       <div>
-        <ItemCount stock={8} initial={1} />
+        <ItemListContainer />
       </div>
     </div>
   );

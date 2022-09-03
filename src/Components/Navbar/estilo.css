@@ -6,11 +6,13 @@
   width: 100%;
   height: 90px;
   background-color: rgb(27, 27, 33);
+  padding-left: 5vh;
+  padding-right: 5vh;
 }
 
 .navBar-container h2 {
   color: white;
-  margin-left: 9rem;
+  margin-left: 15vh;
 }
 
 ul {
@@ -21,12 +23,11 @@ ul {
 }
 
 li a {
-  margin-left: 5px;
-  margin-right: 15px;
+  margin-right: 3vh;
   text-decoration: none;
   color: white;
 }
 
 li a svg {
-  margin-right: 1rem;
+  margin-top: 3vh;
 }

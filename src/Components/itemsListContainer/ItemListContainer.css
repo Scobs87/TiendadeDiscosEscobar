@@ -1,5 +1,7 @@
-h1 {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .elContador {
@@ -8,4 +10,35 @@ h1 {
 
 .botonCarrito {
   text-align: center;
+}
+
+.Loader {
+  display: flex;
+  margin-top: 40vh;
+  font-size: 25px;
+  font-weight: 700;
+
+  justify-content: center;
+}
+
+.ContenedorCatalogo {
+  margin: 5rem;
+  flex-direction: column;
+}
+
+.UnDisco {
+  width: 60vh;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.UnDisco img {
+  width: 256px;
+  height: 256px;
+}
+
+.Albums {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }

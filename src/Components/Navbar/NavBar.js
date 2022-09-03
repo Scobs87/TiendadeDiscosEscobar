@@ -1,10 +1,13 @@
-import logo from "../../logo.svg";
+// import logo from "../../logo.svg";
+import logo from "../Navbar/Logo/LogoVinyl.png";
 import "./estilo.css";
 import CartWidget from "./CartWidget/CartWidget";
 const Navbar = () => {
   return (
     <div className="navBar-container">
-      <img width={"90px"} src={logo} alt="logo" />
+      <a href="#">
+        <img width={"60vh"} src={logo} alt="logo" />
+      </a>
       <div>
         <h2>TJ Record Shop</h2>
       </div>
