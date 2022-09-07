@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import ItemList from "./ItemList";
 import "./ItemListContainer.css";
 
-const ItemListContainer = ({ greeting }) => {
+const ItemListContainer = () => {
   const [items, setItems] = useState([]);
 
   const getData = new Promise((resolve, reject) => {
