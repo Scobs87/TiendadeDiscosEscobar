@@ -26,6 +26,11 @@
   flex-direction: column;
 }
 
+.ContenedorDisco {
+  margin: 5rem;
+  flex-direction: column;
+}
+
 .UnDisco {
   width: 60vh;
   margin-bottom: 40px;
@@ -41,4 +46,15 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.UnAlbum {
+  width: 185vh;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.UnAlbum img {
+  width: 456px;
+  height: 456px;
 }

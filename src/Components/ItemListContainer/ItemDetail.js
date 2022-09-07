@@ -1,25 +1,15 @@
-import Item from "./Item";
 import "./ItemListContainer.css";
 
-const ItemDetail = ({ UnDisco }) => {
+const ItemDetail = ({ cover, artista, album, genero, precio, stock }) => {
   return (
-    <>
-      <div className="Albums">
-        {UnDisco.map((disco) => {
-          return (
-            <Item
-              key={disco.id}
-              cover={disco.cover}
-              artista={disco.artista}
-              album={disco.album}
-              genero={disco.genero}
-              precio={disco.precio}
-              stock={disco.stock}
-            />
-          );
-        })}
-      </div>
-    </>
+    <div className="UnAlbum">
+      <img src={cover} alt={artista} />
+      <h1>{artista}</h1>
+      <h2>{album}</h2>
+      <h3>Genero: {genero}</h3>
+      <p>Precio: ${precio} pesos</p>
+      <p>Stock: {stock}</p>
+    </div>
   );
 };
 
