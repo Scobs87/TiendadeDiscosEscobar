@@ -2,8 +2,12 @@ import data from "./MockData";
 import { useState, useEffect } from "react";
 import ItemList from "./ItemList";
 import "./ItemListContainer.css";
+import { useParams } from "react-router-dom";
+import Catalogo from "../Catalogo/Catalogo";
 
 const ItemListContainer = () => {
+  const { categoryId } = useParams();
+
   const [items, setItems] = useState([]);
 
   const getData = new Promise((resolve, reject) => {
@@ -14,15 +18,22 @@ const ItemListContainer = () => {
 
   useEffect(() => {
     getData.then((result) => {
-      setItems(result);
-      console.log(result);
+      if (categoryId) {
+        const DiscosFiltrados = result.filter(
+          (UnAlbum) => UnAlbum.generoCategoryId === categoryId
+        );
+        setItems(DiscosFiltrados);
+      } else {
+        setItems(result);
+      }
     });
-  }, []);
+  }, [categoryId]);
 
   return (
     <>
       {items.length > 0 ? (
         <div className="ContenedorCatalogo">
+          <Catalogo />
           <ItemList ListaDeDiscos={items} />
         </div>
       ) : (

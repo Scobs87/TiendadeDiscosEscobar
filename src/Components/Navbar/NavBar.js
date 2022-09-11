@@ -1,23 +1,38 @@
-// import logo from "../../logo.svg";
 import logo from "../Navbar/Logo/LogoVinyl.png";
 import "./estilo.css";
 import CartWidget from "./CartWidget/CartWidget";
+import { NavLink } from "react-router-dom";
+
 const Navbar = () => {
   return (
     <div className="navBar-container">
-      <a href="#">
+      <NavLink to="/">
         <img width={"60vh"} src={logo} alt="logo" />
-      </a>
+      </NavLink>
       <div>
         <h2>TJ Record Shop</h2>
       </div>
       <div>
         <ul>
           <li>
-            <a href="#">Login</a>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "ClaseActive" : "ClaseInactive"
+              }
+              to="/Login"
+            >
+              Login
+            </NavLink>
           </li>
           <li>
-            <a href="#">Catalogo</a>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "ClaseActive" : "ClaseInactive"
+              }
+              to="/Catalogo"
+            >
+              Catalogo
+            </NavLink>
           </li>
           <li>
             <a href="#">

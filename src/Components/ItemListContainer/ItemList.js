@@ -8,6 +8,7 @@ const ItemList = ({ ListaDeDiscos }) => {
         {ListaDeDiscos.map((disco) => {
           return (
             <Item
+              CardDetalle={disco}
               key={disco.id}
               cover={disco.cover}
               artista={disco.artista}

@@ -1,30 +1,29 @@
+import data from "./MockData";
 import ItemDetail from "./ItemDetail";
 import { useState, useEffect } from "react";
 import "./ItemListContainer.css";
+import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
   const [DiscoDetalle, setDiscoDetalle] = useState([]);
+  const { detalleId } = useParams();
 
-  const getDisco = new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve({
-        id: 3,
-        artista: "The Strokes",
-        album: "Room On Fire",
-        genero: "Rock Alternativo",
-        precio: 350,
-        cover:
-          "https://i.scdn.co/image/ab67616d0000b2730f35726025e0f025da4c688f",
-        stock: 15,
-      });
-    }, 2000);
-  });
+  const getDisco = (identificador) => {
+    return new Promise((resolve, reject) => {
+      const disco = data.find(
+        (UnDisco) => UnDisco.id === parseInt(identificador)
+      );
+      resolve(disco);
+    });
+  };
 
   useEffect(() => {
-    getDisco.then((result) => {
-      setDiscoDetalle(result);
-    });
-  }, []);
+    const getAlbum = async () => {
+      const UnAlbum = await getDisco(detalleId);
+      setDiscoDetalle(UnAlbum);
+    };
+    getAlbum();
+  }, [detalleId]);
 
   return (
     <>
