@@ -16,9 +16,9 @@ const Navbar = () => {
         <ul>
           <li>
             <NavLink
-              className={({ isActive }) =>
-                isActive ? "ClaseActive" : "ClaseInactive"
-              }
+              // className={({ isActive }) =>
+              //   isActive ? "ClaseActive" : "ClaseInactive"
+              // }
               to="/Login"
             >
               Login
@@ -26,9 +26,9 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink
-              className={({ isActive }) =>
-                isActive ? "ClaseActive" : "ClaseInactive"
-              }
+              // className={({ isActive }) =>
+              //   isActive ? "ClaseActive" : "ClaseInactive"
+              // }
               to="/Catalogo"
             >
               Catalogo
