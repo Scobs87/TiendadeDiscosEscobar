@@ -30,6 +30,7 @@ const ItemDetailContainer = () => {
       {DiscoDetalle ? (
         <div className="ContenedorDisco">
           <ItemDetail
+            TodoElDisco={DiscoDetalle}
             cover={DiscoDetalle.cover}
             artista={DiscoDetalle.artista}
             album={DiscoDetalle.album}

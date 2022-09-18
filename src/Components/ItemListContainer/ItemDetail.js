@@ -1,12 +1,23 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import ItemCount from "./ItemCount";
 import "./ItemListContainer.css";
+import { CartContext } from "../Context/CartContext";
 
-const ItemDetail = ({ cover, artista, album, genero, precio, stock }) => {
+const ItemDetail = ({
+  cover,
+  artista,
+  album,
+  genero,
+  precio,
+  stock,
+  TodoElDisco,
+}) => {
+  const { addDisco } = useContext(CartContext);
   const [GuardandoContador, setGuardandoContador] = useState(0);
   const onAdd = (data) => {
     console.log(data);
     setGuardandoContador(data);
+    addDisco(TodoElDisco, data);
   };
 
   return (

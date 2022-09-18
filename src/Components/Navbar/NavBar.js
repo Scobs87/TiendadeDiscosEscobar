@@ -15,29 +15,15 @@ const Navbar = () => {
       <div>
         <ul>
           <li>
-            <NavLink
-              // className={({ isActive }) =>
-              //   isActive ? "ClaseActive" : "ClaseInactive"
-              // }
-              to="/Login"
-            >
-              Login
-            </NavLink>
+            <NavLink to="/Login">Login</NavLink>
           </li>
           <li>
-            <NavLink
-              // className={({ isActive }) =>
-              //   isActive ? "ClaseActive" : "ClaseInactive"
-              // }
-              to="/Catalogo"
-            >
-              Catalogo
-            </NavLink>
+            <NavLink to="/Catalogo">Catalogo</NavLink>
           </li>
           <li>
-            <a href="#">
+            <NavLink to="/Cart">
               <CartWidget />
-            </a>
+            </NavLink>
           </li>
         </ul>
       </div>
