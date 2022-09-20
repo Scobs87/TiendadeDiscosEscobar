@@ -39,6 +39,31 @@ tr:nth-child(even) {
   border-radius: 3px;
 }
 
+.Botones {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5vh;
+  margin-right: 172vh;
+  margin-bottom: 10vh;
+}
+
+.Botones button {
+  margin-top: 10px;
+}
+
+.SinCarrito {
+  margin-top: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.SinCarrito h5 {
+  margin-top: 10px;
+  font-weight: 600;
+  color: black;
+}
+
 /* .laTabla {
   padding-bottom: 10vh;
 }

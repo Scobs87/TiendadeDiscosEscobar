@@ -24,9 +24,13 @@ const CartProvider = ({ children }) => {
       const ListaCarrito = [...DiscosEnCarrito];
       ListaCarrito[DiscoPos].cantidad =
         ListaCarrito[DiscoPos].cantidad + cantidad;
+      ListaCarrito[DiscoPos].PrecioCantidad =
+        ListaCarrito[DiscoPos].cantidad * ListaCarrito[DiscoPos].precio;
+
       setDiscosEnCarrito(ListaCarrito);
     } else {
       const ListaCarrito = [...DiscosEnCarrito];
+      NuevoDisco.PrecioCantidad = NuevoDisco.cantidad * NuevoDisco.precio;
       ListaCarrito.push(NuevoDisco);
       setDiscosEnCarrito(ListaCarrito);
     }
@@ -44,6 +48,22 @@ const CartProvider = ({ children }) => {
     setDiscosEnCarrito([]);
   };
 
+  const TotalCarrito = () => {
+    const getTotal = DiscosEnCarrito.reduce(
+      (acc, disco) => acc + disco.PrecioCantidad,
+      0
+    );
+    return getTotal;
+  };
+
+  const CartWidgetCounter = () => {
+    const getTotalWidget = DiscosEnCarrito.reduce(
+      (acc, disco) => acc + disco.cantidad,
+      0
+    );
+    return getTotalWidget > 0 ? getTotalWidget : null;
+  };
+
   return (
     <CartContext.Provider
       value={{
@@ -52,6 +72,8 @@ const CartProvider = ({ children }) => {
         RemoverDisco,
         ClearCarrito,
         IsInCart,
+        TotalCarrito,
+        CartWidgetCounter,
       }}
     >
       {children}

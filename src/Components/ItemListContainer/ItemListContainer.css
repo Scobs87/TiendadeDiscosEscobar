@@ -58,3 +58,9 @@
   width: 456px;
   height: 456px;
 }
+
+.IrAlCarrito {
+  display: flex;
+  justify-content: center;
+  margin-right: 40px;
+}
