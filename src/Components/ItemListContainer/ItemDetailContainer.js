@@ -3,24 +3,40 @@ import ItemDetail from "./ItemDetail";
 import { useState, useEffect } from "react";
 import "./ItemListContainer.css";
 import { useParams } from "react-router-dom";
+import { db } from "../../Utils/Firebase";
+import { doc, getDoc } from "firebase/firestore";
 
 const ItemDetailContainer = () => {
   const [DiscoDetalle, setDiscoDetalle] = useState([]);
   const { detalleId } = useParams();
 
-  const getDisco = (identificador) => {
-    return new Promise((resolve, reject) => {
-      const disco = data.find(
-        (UnDisco) => UnDisco.id === parseInt(identificador)
-      );
-      resolve(disco);
-    });
-  };
+  // const getDisco = (identificador) => {
+  //   return new Promise((resolve, reject) => {
+  //     const disco = data.find(
+  //       (UnDisco) => UnDisco.id === parseInt(identificador)
+  //     );
+  //     resolve(disco);
+  //   });
+  // };
+
+  // useEffect(() => {
+  //   const getAlbum = async () => {
+  //     const UnAlbum = await getDisco(detalleId);
+  //     setDiscoDetalle(UnAlbum);
+  //   };
+  //   getAlbum();
+  // }, [detalleId]);
 
   useEffect(() => {
     const getAlbum = async () => {
-      const UnAlbum = await getDisco(detalleId);
-      setDiscoDetalle(UnAlbum);
+      const getQuery = doc(db, "discos", detalleId);
+      const response = await getDoc(getQuery);
+      const nuevoAlbum = {
+        id: response.id,
+        ...response.data(),
+      };
+      console.log(nuevoAlbum);
+      setDiscoDetalle(nuevoAlbum);
     };
     getAlbum();
   }, [detalleId]);
