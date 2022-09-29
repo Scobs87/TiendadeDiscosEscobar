@@ -64,6 +64,17 @@ const CartProvider = ({ children }) => {
     return getTotalWidget > 0 ? getTotalWidget : null;
   };
 
+  const ElDate = () => {
+    const showDate = new Date();
+    const displayTodaysDate =
+      showDate.getDate() +
+      "/" +
+      (showDate.getMonth() + 1) +
+      "/" +
+      showDate.getFullYear();
+    return displayTodaysDate;
+  };
+
   return (
     <CartContext.Provider
       value={{
@@ -74,6 +85,7 @@ const CartProvider = ({ children }) => {
         IsInCart,
         TotalCarrito,
         CartWidgetCounter,
+        ElDate,
       }}
     >
       {children}

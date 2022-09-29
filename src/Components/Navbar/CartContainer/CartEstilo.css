@@ -64,51 +64,12 @@ tr:nth-child(even) {
   color: black;
 }
 
-/* .laTabla {
-  padding-bottom: 10vh;
-}
-
-.table {
+.elForm {
+  margin: 10vh;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
-thead {
-  margin: 3rem;
+.compra {
+  margin-top: 36vh;
 }
-
-tr {
-  display: flex;
-}
-
-th {
-  margin: 7vh;
-}
-
-tbody {
-  display: flex;
-}
-
-.TableData {
-  display: flex;
-  flex-direction: row;
-}
-
-.Total {
-  display: flex;
-  justify-content: space-evenly;
-  margin: 3rem;
-} */
-
-/* p {
-  margin: 5vh;
-}
-
-.BotonEliminar {
-  display: flex;
-  margin: auto;
-}
-
-.VaciarCarrito {
-  padding: 2vh;
-} */

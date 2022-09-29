@@ -10,23 +10,6 @@ const ItemDetailContainer = () => {
   const [DiscoDetalle, setDiscoDetalle] = useState([]);
   const { detalleId } = useParams();
 
-  // const getDisco = (identificador) => {
-  //   return new Promise((resolve, reject) => {
-  //     const disco = data.find(
-  //       (UnDisco) => UnDisco.id === parseInt(identificador)
-  //     );
-  //     resolve(disco);
-  //   });
-  // };
-
-  // useEffect(() => {
-  //   const getAlbum = async () => {
-  //     const UnAlbum = await getDisco(detalleId);
-  //     setDiscoDetalle(UnAlbum);
-  //   };
-  //   getAlbum();
-  // }, [detalleId]);
-
   useEffect(() => {
     const getAlbum = async () => {
       const getQuery = doc(db, "discos", detalleId);
