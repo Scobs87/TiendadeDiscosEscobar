@@ -15,7 +15,7 @@ const ItemList = ({ ListaDeDiscos }) => {
               album={disco.album}
               genero={disco.genero}
               precio={disco.precio}
-              stock={disco.stock}
+              // stock={disco.stock}
             />
           );
         })}

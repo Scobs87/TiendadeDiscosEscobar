@@ -25,23 +25,28 @@ const ItemDetail = ({
   return (
     <>
       <div className="UnAlbum">
-        <img src={cover} alt={artista} />
-        <h1>{artista}</h1>
-        <h2>{album}</h2>
-        <h3>Genero: {genero}</h3>
-        <p>Precio: ${precio} pesos</p>
-        <p>Stock: {stock}</p>
-        <h4>{GuardandoContador}</h4>
-        <ItemCount stock={10} initial={1} AgregarCarrito={onAdd} />
-      </div>
-
-      {GuardandoContador > 0 && (
-        <div className="IrAlCarrito">
-          <Link to="/cart">
-            <button>Ir al carrito</button>
-          </Link>
+        <div className="elCover">
+          <img src={cover} alt={artista} />
         </div>
-      )}
+        <div className="info">
+          <h1 className="artista">{artista}</h1>
+          <h2 className="album">{album}</h2>
+          <h3 className="genero">
+            Genero: <p className="estiloGenero">{genero}</p>
+          </h3>
+          <p className="precio">${precio}.00</p>
+          {/* <p>Stock: {stock}</p> */}
+          {/* <h4>{GuardandoContador}</h4> */}
+          <ItemCount stock={10} initial={1} AgregarCarrito={onAdd} />
+          {GuardandoContador > 0 && (
+            <div className="IrAlCarrito">
+              <Link style={{ textDecoration: "none" }} to="/cart">
+                <button className="IrAlCarritoEstilo">Ir al carrito</button>
+              </Link>
+            </div>
+          )}
+        </div>
+      </div>
     </>
   );
 };

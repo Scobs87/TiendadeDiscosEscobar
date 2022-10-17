@@ -1,4 +1,3 @@
-import data from "./MockData";
 import ItemDetail from "./ItemDetail";
 import { useState, useEffect } from "react";
 import "./ItemListContainer.css";

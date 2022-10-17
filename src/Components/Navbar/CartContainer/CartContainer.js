@@ -4,11 +4,13 @@ import "../CartContainer/CartEstilo.css";
 import { Link } from "react-router-dom";
 import { db } from "../../../Utils/Firebase";
 import { collection, addDoc } from "firebase/firestore";
+import TickLogo from "../CartContainer/tick.png";
 
 const CartContainer = () => {
   const { DiscosEnCarrito, RemoverDisco, ClearCarrito, TotalCarrito, ElDate } =
     useContext(CartContext);
   const [idOrden, setIdOrden] = useState();
+  const [ClickModal, setClickModal] = useState(false);
 
   const sendOrder = (event) => {
     event.preventDefault();
@@ -34,15 +36,17 @@ const CartContainer = () => {
     <div className="Carrito">
       {idOrden ? (
         <>
-          <p className="compra">
-            Su orden fue realizada bajo el numero: {idOrden}
-          </p>
-          <Link to="/" style={{ textDecoration: "none" }}>
-            <h5>Ir al catalogo</h5>
-          </Link>
+          <div className="PopCompra">
+            <img src={TickLogo} alt="tick" />
+            <p className="compra">Su orden fue realizada bajo el numero:</p>
+            <p className="IdCompra">{idOrden}</p>
+            <Link to="/" style={{ textDecoration: "none" }}>
+              <button>Ir al catalogo</button>
+            </Link>
+          </div>
         </>
       ) : (
-        <div>
+        <div className="CarritoBody">
           {DiscosEnCarrito.length > 0 ? (
             <>
               <table>
@@ -87,19 +91,46 @@ const CartContainer = () => {
               </table>
               <div className="Botones">
                 <h2>TOTAL: ${TotalCarrito()} mxn</h2>
+                <button
+                  className="ComprarBoton"
+                  onClick={() => setClickModal(!ClickModal)}
+                >
+                  COMPRAR
+                </button>
                 <button className="VaciarCarrito" onClick={ClearCarrito}>
                   Vaciar carrito
                 </button>
               </div>
-              <form className="elForm" onSubmit={sendOrder}>
-                <label>Nombre: </label>
-                <input type="text" />
-                <label>Telefono: </label>
-                <input type="tel" />
-                <label>Email: </label>
-                <input type="email" />
-                <button type="submit">Enviar orden</button>
-              </form>
+              {ClickModal && (
+                <div className="EstiloForm">
+                  <form className="ModalCompra" onSubmit={sendOrder}>
+                    <button
+                      className="CerrarModal"
+                      onClick={() => setClickModal(!ClickModal)}
+                    >
+                      x
+                    </button>
+                    <div className="LoginForm">
+                      <h2>Datos de la orden</h2>
+                      <div className="FormElement">
+                        <label for="text">Nombre</label>
+                        <input type="text" placeholder="Ingresar nombre" />
+                      </div>
+                      <div className="FormElement">
+                        <label for="email">Email</label>
+                        <input type="email" placeholder="Ingresar email" />
+                      </div>
+                      <div className="FormElement">
+                        <label for="tel">Telefono</label>
+                        <input type="tel" placeholder="Ingresar telefono" />
+                      </div>
+                      <div className="FormElement">
+                        <button>Enviar orden</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              )}
             </>
           ) : (
             <div className="SinCarrito">

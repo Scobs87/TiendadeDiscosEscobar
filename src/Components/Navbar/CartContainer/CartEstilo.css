@@ -51,6 +51,22 @@ tr:nth-child(even) {
   margin-top: 10px;
 }
 
+.Botones .ComprarBoton {
+  height: 40px;
+  background-color: #51b064;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.Botones .VaciarCarrito {
+  height: 40px;
+  background-color: rgb(255, 166, 0);
+  color: white;
+
+  font-weight: 600;
+}
+
 .SinCarrito {
   margin-top: 40vh;
   display: flex;
@@ -70,6 +86,118 @@ tr:nth-child(even) {
   justify-content: center;
 }
 
-.compra {
-  margin-top: 36vh;
+.EstiloForm {
+  background: rgba(44, 42, 42, 0.626);
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+
+  width: 100%;
+  height: 300%;
+}
+
+.ModalCompra {
+  transform: translate(140%, 40%);
+  width: 380px;
+  padding: 20px 30px;
+  background: rgb(28, 24, 24);
+  box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+
+.ModalCompra .CerrarModal {
+  width: 20px;
+  cursor: pointer;
+  margin-left: 290px;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  background-color: rgb(28, 24, 24);
+  border-style: none;
+}
+
+.ModalCompra .LoginForm h2 {
+  text-align: center;
+  color: white;
+  margin: 10px 0px 20px;
+  font-size: 25px;
+}
+
+.ModalCompra .LoginForm .FormElement {
+  margin: 15px 0px;
+}
+
+.ModalCompra .LoginForm .FormElement label {
+  font-size: 14px;
+  color: white;
+}
+
+.ModalCompra .LoginForm .FormElement input[type="text"],
+.ModalCompra .LoginForm .FormElement input[type="email"],
+.ModalCompra .LoginForm .FormElement input[type="tel"] {
+  margin-top: 5px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+.ModalCompra .LoginForm .FormElement button {
+  width: 100%;
+  height: 40px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background-color: #51b064;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.PopCompra {
+  width: 600px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 8px;
+  position: absolute;
+  top: 30%;
+  text-align: center;
+  padding: 30px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.PopCompra img {
+  width: 100px;
+  margin-top: -70px;
+  border-radius: 50%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.PopCompra .compra {
+  font-size: 28px;
+  margin: 10px;
+}
+
+.PopCompra .IdCompra {
+  font-size: 20px;
+  margin: 30px;
+  font-weight: 700;
+}
+
+.PopCompra button {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #51b064;
+  color: white;
+  font-size: 15px;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }

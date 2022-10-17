@@ -13,14 +13,14 @@ const Item = ({
 }) => {
   return (
     <div className="UnDisco">
-      <Link to={`/Item/${CardDetalle.id}`}>
+      <Link style={{ textDecoration: "none" }} to={`/Item/${CardDetalle.id}`}>
         <img src={cover} alt={artista} />
+        <h1>{artista}</h1>
+        <h3>{album}</h3>
+        <h4>Genero: {genero}</h4>
+        <h5>Precio: ${precio} pesos</h5>
+        {/* <p>Stock: {stock}</p> */}
       </Link>
-      <h1>{artista}</h1>
-      <h2>{album}</h2>
-      <h3>Genero: {genero}</h3>
-      <p>Precio: ${precio} pesos</p>
-      <p>Stock: {stock}</p>
     </div>
   );
 };

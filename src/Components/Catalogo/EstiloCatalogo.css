@@ -1,11 +1,30 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.dropdown-menu {
+  background: red;
+  width: 200px;
+  position: absolute;
+  top: 80px;
+  list-style: none;
+  text-align: start;
 }
 
-.Generos {
-  margin: 10vh;
-  display: flex;
-  justify-content: space-around;
+.dropdown-menu li {
+  background: #51b064;
+  cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+  background: #6bca7e;
+}
+
+.dropdown-menu.clicked {
+  display: none;
+}
+
+.dropdown-link {
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  color: #fff;
+  padding: 16px;
 }

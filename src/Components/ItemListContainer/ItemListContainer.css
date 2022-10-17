@@ -4,12 +4,26 @@
   box-sizing: border-box;
 }
 
+.contadorDetalle {
+  display: flex;
+}
+
 .elContador {
+  display: flex;
   text-align: center;
 }
 
-.botonCarrito {
-  text-align: center;
+.sumaResta {
+  display: flex;
+}
+
+.IrAlCarrito .IrAlCarritoEstilo {
+  display: flex;
+  font-weight: 600;
+  padding: 8px;
+  border-radius: 1px;
+  cursor: pointer;
+  background-color: rgb(255, 72, 0);
 }
 
 .Loader {
@@ -32,9 +46,21 @@
 }
 
 .UnDisco {
-  width: 60vh;
+  width: 37vh;
+  margin-right: 11vh;
   margin-bottom: 40px;
+  padding-bottom: 2vh;
   text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  transition: all 0.25s;
+  background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
+}
+
+.UnDisco:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.6);
 }
 
 .UnDisco img {
@@ -48,19 +74,83 @@
   justify-content: center;
 }
 
-.UnAlbum {
-  width: 185vh;
-  margin-bottom: 40px;
-  text-align: center;
+.UnDisco h1 {
+  color: white;
+  font-family: "Didact Gothic", sans-serif;
+  font-weight: 100;
 }
 
-.UnAlbum img {
+.UnDisco h3 {
+  color: white;
+  font-family: "Didact Gothic", sans-serif;
+  font-weight: 100;
+}
+
+.UnDisco h4 {
+  color: white;
+  font-family: "Didact Gothic", sans-serif;
+  font-weight: 100;
+}
+
+.UnDisco h5 {
+  color: white;
+  font-family: "Didact Gothic", sans-serif;
+  font-weight: 600;
+}
+
+.UnAlbum {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.UnAlbum .elCover img {
+  border-radius: 10px;
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.6);
   width: 456px;
   height: 456px;
 }
 
-.IrAlCarrito {
+.UnAlbum .info {
   display: flex;
-  justify-content: center;
-  margin-right: 40px;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.info .genero {
+  display: flex;
+}
+.info .genero .estiloGenero {
+  color: rgb(89, 15, 159);
+  margin-left: 5px;
+}
+
+.info .precio {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.laCantidad {
+  font-weight: 500;
+}
+
+.sumaResta .losBotones {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  width: 30px;
+  height: 20px;
+}
+
+.sumaResta h3 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.botonCarrito .botonCarritoEstilo {
+  font-weight: 600;
+  padding: 8px;
+  border-radius: 1px;
+  cursor: pointer;
+  background-color: rgb(255, 166, 0);
 }

@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.fondo {
+  background: rgb(26, 23, 23);
+  background: linear-gradient(
+    1350deg,
+    rgba(26, 23, 23, 1) 31%,
+    rgba(81, 176, 100, 1) 100%
+  );
+  height: 100vh;
+}
+
+.main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 380px;
+  padding: 20px 30px;
+  background: #fff;
+  box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+
+.main .LoginForm h2 {
+  text-align: center;
+  color: #222;
+  margin: 10px 0px 20px;
+  font-size: 25px;
+}
+
+.main .LoginForm .FormElement {
+  margin: 15px 0px;
+}
+
+.main .LoginForm .FormElement label {
+  font-size: 14px;
+}
+
+.main .LoginForm .FormElement input[type="text"],
+.main .LoginForm .FormElement input[type="password"] {
+  margin-top: 5px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+.main .LoginForm .FormElement input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.main .LoginForm .FormElement button {
+  width: 100%;
+  height: 40px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+
+.main .LoginForm .FormElement a {
+  display: block;
+  text-align: right;
+  font-size: 15px;
+  color: #1a79ca;
+  text-decoration: none;
+  font-weight: 600;
+}
